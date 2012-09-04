@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--Angela Koepplinger-->
+<!--Visual Frameworks: Term 1209-->
+<!--Project 1: Web App Part 1-->
+
+<html>	
+	<head>
+		<meta charset="UTF-8"/>
+		<meta keywords="Procurement Task, Order management"/>
+		<meta description="Manage Project Orders; POP Requirements; and Closeout Of Tasks." />
+		<meta name="robots" content="index, follow"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		<meta name="HandHeldFriendly" content="True"/>
+		<meta name="MobileOptimized" content= "320"/>
+		<title>Procurement Task</title>
+	</head>
+	<body>
+		<h1>Procurement Task</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Purchase Requirement</legend>
+				<ul style="list-style-type:none">
+					<li>
+						<label for="PurchaseType">Purchase Type</label>
+						<select id="PurchaseType">
+							<option value=""></option>
+							<option value="Maintenance">Maintenance</option>
+							<option value="Product">Product</option>
+						</select>
+					</li>
+					<li><label for="WorkOrder">Work Order:</label><input type="text" id="WorkOrder" placeholder="Project Name"/></li>
+					<li><label for="SupportSite">Support Site:</label><input type="text" id="SupportSite" placeholder="ex. TES"/></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Item Information</legend>
+				<ul style="list-style-type:none">
+					<li>
+						<label for="ItemType">Item Type</label>
+						<select id="ItemType">
+							<option value=""></option>
+							<option value="Hardware">Hardware</option>
+							<option value="Software">Software</option>
+							<option value="Support Contract">Support Contract</option>
+						</select>
+					</li>
+					<li>Asset?
+						<ul style="list-style-type:none">
+							<li><input type="radio" name="asset yes/no" value="Yes" id="yes" /><label for="yes">Yes</label></li>
+							<li><input type="radio" name="asset yes/no" value="No" id="no" /><label for="no">No</label></li>
+						</ul>
+						</li>
+						<li><label for="Manufacturer">Manufacturer:</label><input type="text" id="Manufacturer" placeholder="ex. Cisco Systems"/></li>
+						<li><label for="PartNumber">Part Number:</label><input type="text" id="PartNumber" placeholder="ex. WS-C2960C-24TT-L"/></li>
+						<li><label for="Qty">Qty:</label><input type="number" id="Qty" placeholder="ex. 3"/></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Additional Information</legend>
+					<ul style="list-style-type:none">
+						<li><label for="Urgency">Urgency:</label><input id="Urgency" type="range" min="100" max="500" /></li>
+						<li><input type="checkbox" id="MgmtApproval"/><label for="MgmtApproval">Approved by Mgmt</label></li>
+						<li><input type="checkbox" id="R&amp;RRequest"/><label for="R&amp;RRequest">R&amp;R Request Needed</label></li>
+						<li><label for="RequiredByDate">Required by Date:</label><input type="text" id="RequiredByDate" placeholder="2012-01-01"/></li>
+						<li><label for="CompletionDate">Completion Date:</label><input type="text" id="CompletionDate" placeholder="2012-01-01"/></li>
+						<li><label for="Notes">Notes:</label><textarea id="Notes"></textarea></li>
+						<li><input type="hidden" value="true"/></li>
+
+					</ul>
+			</fieldset>
+				<input type="submit" value="Add Task" />
+				<a href="#">Clear Stored Data</a>
+				<a href="#">Display Data</a>
+        </form>
+
+		</form>
+	</body>
+</html>
+					
+
+
+							
+							
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
