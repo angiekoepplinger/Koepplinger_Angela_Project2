@@ -4,10 +4,53 @@
 //Date: 09/03/12
 
 
+//Wait until the DOM is ready.
+window.addEventListener("DOMContentLoaded", function(){
 
-//Javascript Save Data, Get Data, Clear Data, Array Function
+	//getElementById Function
+	function $(x) {
+		var theElement = document.getElementById(x);
+		return theElement;
+	}
 
 
+	//Create select field element and populate with options.
+	function makeCats(){
+		var formTag = document.getElementsByTagName("form");   //formTag is an array of all of the form tags.
+		var selectLi = $('select');
+		var makeSelect = document.createElement('select');
+			makeSelect.setAttribute("id", "groups")
+		
+		for(var i=0, j=purchaseTypeOptions.length; i<j; i++){
+			var makeOption = document.createElement('option');
+			var optText = purchaseTypeOptions[i];
+			makeOption.setAttribute("value", optText);
+			makeOption.innerHTML = optText;
+			makeSelect.appendChild(makeOption);
+
+		};
+		selectLi.appendChild(makeSelect);
+	};
+
+
+
+	//Variable defaults
+	var purchaseTypeOptions = ["Select A Type", "Maintenance", "Product"];
+	makeCats();
+
+
+
+
+	//Set Link & Submit Click Events
+	// var displayData = $('displayData');
+	// displayData.addEventLister("click", getData);
+	// var clearData = $('clearData');
+	// clearData.addEventLister("click", clearLocal);
+	// var save = $('submit');
+	// submit.addEventLister('click', storeData);
+
+
+});
 
 
 
