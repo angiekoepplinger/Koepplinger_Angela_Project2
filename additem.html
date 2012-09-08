@@ -17,98 +17,52 @@
 	</head>
 	<body>
 		<h1>Procurement Task</h1>
-		<form action="#" method="post">
+		<nav>
+			<a href="#" id="clearData">Clear Stored Data</a>
+			<a href="#" id="displayData">Display Data</a>
+			<a href="additem.html" id="addNew" style="display:none;">Add New Task</a>
+		</nav>
+		<form action="#" method="post" id="procurementTask">
 			<fieldset>
 				<legend>Purchase Requirement</legend>
 				<ul style="list-style-type:none">
-					<li id="select"><label for="groups">Add Purchase Type</label></li>
-					<li><label for="WorkOrder">Work Order:</label><input type="text" id="WorkOrder" placeholder="Project Name"/></li>
-					<li><label for="SupportSite">Support Site:</label><input type="text" id="SupportSite" placeholder="ex. TES"/></li>
+					<li id="purchaseType"><label for="purchaseType">Purchase Type</label></li>
+					<li><label for="workOrder">Work Order:</label><input type="text" id="workOrder" placeholder="Project Name"/></li>
+					<li><label for="supportSite">Support Site:</label><input type="text" id="supportSite" placeholder="ex. TES"/></li>
 				</ul>
 			</fieldset>
 			<fieldset>
 				<legend>Item Information</legend>
 				<ul style="list-style-type:none">
-					<li>
-						<label for="ItemType">Item Type</label>
-						<select id="ItemType">
-							<option value=""></option>
-							<option value="Hardware">Hardware</option>
-							<option value="Software">Software</option>
-							<option value="Support Contract">Support Contract</option>
-						</select>
-					</li>
+					<li id="itemType"><label for="itemType">Item Type</label></li>
 					<li>Asset?
 						<ul style="list-style-type:none">
-							<li><input type="radio" name="asset yes/no" value="Yes" id="yes" /><label for="yes">Yes</label></li>
-							<li><input type="radio" name="asset yes/no" value="No" id="no" /><label for="no">No</label></li>
+							<li><input type="radio" name="asset" value="Yes" id="yes" /><label for="yes">Yes</label></li>
+							<li><input type="radio" name="asset" value="No" id="no" /><label for="no">No</label></li>
 						</ul>
 						</li>
-						<li><label for="Manufacturer">Manufacturer:</label><input type="text" id="Manufacturer" placeholder="ex. Cisco Systems"/></li>
-						<li><label for="PartNumber">Part Number:</label><input type="text" id="PartNumber" placeholder="ex. WS-C2960C-24TT-L"/></li>
-						<li><label for="Qty">Qty:</label><input type="number" id="Qty" placeholder="ex. 3"/></li>
+						<li><label for="manufacturer">Manufacturer:</label><input type="text" id="manufacturer" placeholder="ex. Cisco Systems"/></li>
+						<li><label for="partNumber">Part Number:</label><input type="text" id="partNumber" placeholder="ex. WS-C2960C-24TT-L"/></li>
+						<li><label for="qty">Qty:</label><input type="number" id="qty" placeholder="ex. 3"/></li>
 				</ul>
 			</fieldset>
 			<fieldset>
 				<legend>Additional Information</legend>
 					<ul style="list-style-type:none">
-						<li><label for="Urgency">Urgency:</label><input id="Urgency" type="range" min="100" max="500" /></li>
-						<li><input type="checkbox" id="MgmtApproval"/><label for="MgmtApproval">Approved by Mgmt</label></li>
-						<li><input type="checkbox" id="R&amp;RRequest"/><label for="R&amp;RRequest">R&amp;R Request Needed</label></li>
-						<li><label for="RequiredByDate">Required by Date:</label><input type="text" id="RequiredByDate" placeholder="2012-01-01"/></li>
-						<li><label for="CompletionDate">Completion Date:</label><input type="text" id="CompletionDate" placeholder="2012-01-01"/></li>
-						<li><label for="Notes">Notes:</label><textarea id="Notes"></textarea></li>
+						<li><label for="urgency">Urgency:</label><input id="urgency" type="range" min="1" max="10" /></li>
+						<li><input type="checkbox" id="mgmtApproval" value="Yes"/><label for="mgmtApproval">Approved by Mgmt</label></li>
+						<li><input type="checkbox" id="rrRequest" value="Yes"/><label for="rrRequest">R&amp;R Request Needed</label></li>
+						<li><label for="requiredByDate">Required by Date:</label><input type="date" id="requiredByDate" placeholder="2012-01-01"/></li>
+						<li><label for="completionDate">Completion Date:</label><input type="date" id="completionDate" placeholder="2012-01-01"/></li>
+						<li><label for="notes">Notes:</label><textarea id="notes"></textarea></li>
 						<li><input type="hidden" value="true"/></li>
 
 					</ul>
 			</fieldset>
-		<input type="submit" value="Add Task" id="submit"/>
-		<nav>
-			<a href="#" id="clearData">Clear Stored Data</a>
-			<a href="#" id="displayData">Display Data</a>
-		</nav>
+		<input type="submit" value="Add Purchase Task" id="submit"/>
         </form>
         <script src="js/main.js" type="text/javascript"></script>
 	</body>
 </html>
 					
-
-
-							
-							
-
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
