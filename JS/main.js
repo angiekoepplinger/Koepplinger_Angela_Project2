@@ -1,7 +1,7 @@
 //Angela Koepplinger
 //Visual Frameworks: Term 1209
 // Project 2: Web App Part 2
-//Date: 09/03/12
+//Date: 09/08/12
 
 
 //Wait until the DOM is ready.
@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function $(x) {
 		var theElement = document.getElementById(x);
 		return theElement;
-	}
+	};
 
 
 	//Create select field element and populate with options.
@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			makeOption.setAttribute("value", optText);
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption);
-
 		};
 		selectLi.appendChild(makeSelect);
 	};
@@ -56,20 +55,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		switch(x){
 			//when display data is selected, data is "on", hide form.
 			case "on":
-				$("procurementTask").style.display = "none";
-				//clear data is in an anchor tag in HTML, anchor tags are by default "inline".  
-				//If you make it a block level element, it will span the width of the display.
-				$("clearData").style.display = "inline";
-				//We do not want the displayData tab to show, because we are in this page already, so we turn it off.
-				$("displayData").style.display = "none";
+				$("procurementTask").style.display = "none";		//clear data is in an anchor tag in HTML, anchor tags are by default "inline".  
+				$("clearData").style.display = "inline";			//If you make it a block level element, it will span the width of the display.
+				$("displayData").style.display = "none";			//We do not want the displayData tab to show, because we are in this page already, so we turn it off.
 				$("addNew").style.display = "inline";
 				break;
 			case "off":
-				$("procurementTask").style.display = "block";
-				//clear data is in an anchor tag in HTML, anchor tags are by default "inline".  
-				//If you make it a block level element, it will span the width of the display.
+				$("procurementTask").style.display = "block"; 
 				$("clearData").style.display = "inline";
-				//We do not want the displayData tab to show, because we are in this page already, so we turn it off.
 				$("displayData").style.display = "inline";
 				$("addNew").style.display = "none";
 				$("items").style.display = "none";
@@ -77,7 +70,6 @@ window.addEventListener("DOMContentLoaded", function(){
 			default:
 				return false;
 		};
-
 	};
 	
 	function storeData(){
@@ -118,19 +110,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		makeDiv.setAttribute("id", "items");
 		var makeUl = document.createElement("ul");
 		makeDiv.appendChild(makeUl);
-		//Loop through the local storage and grab the id(key) & associated object(value)
-		for(var i = 0, j=localStorage.length; i<j; i++){ 
-			//Safari 6 adds info to the local storage, convert strings to numbers to exclude safari storage from our data.
-			if(parseInt(localStorage.key(i)/1) === parseInt(localStorage.key(i))) {
+		
+		for(var i = 0, j=localStorage.length; i<j; i++){ 									//Loop through the local storage and grab the id(key) & associated object(value)
+			if(parseInt(localStorage.key(i)/1) === parseInt(localStorage.key(i))) {			//Safari 6 adds info to the local storage, convert strings to numbers to exclude safari storage from our data.
 				var makeli = document.createElement("li");
 				makeUl.appendChild(makeli);
-				var key = localStorage.key(i);  //id associated with form submission object
-				var value = localStorage.getItem(key);  //the object, in this case: var item{}
-				//convert string from local storage back into an object using JSON.parse!
-				var object = JSON.parse(value);			
+				var key = localStorage.key(i);  											//id associated with form submission object
+				var value = localStorage.getItem(key); 										 //the object, in this case: var item{}
+				var object = JSON.parse(value);												//convert string from local storage back into an object using JSON.parse!
 				var makeSubUl = document.createElement("ul");
 				makeli.appendChild(makeSubUl)
-				for(var x in object){		//example: for "item.purchaseType"(key) in the object
+				for(var x in object){														//example: for "item.purchaseType"(key) in the object
 					var makeSubli = document.createElement("li");
 					makeSubUl.appendChild(makeSubli);
 					//get the "value" of the data in our object. The value of our key is an array.
@@ -161,8 +151,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	createList("itemType", itemTypeOptions);
 	var assetValue;
 	var value;
-	// getCheckboxValue("mgmtApproval");
-	// getCheckboxValue("rrRequest");
+	
 
 	// Set Link & Submit Click Events
 	 var displayData = $('displayData');
@@ -171,8 +160,6 @@ window.addEventListener("DOMContentLoaded", function(){
 	clearData.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", storeData);
-
-
 });
 
 
